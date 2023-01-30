@@ -6,10 +6,25 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100vh;
+  /* background-color: #303030; */
+  z-index: -1;
+}
+
 body {
   font-family: "Jost", sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #e7eee9;
+}
+
+header {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background-color: white;
 }
 
 .header {
@@ -36,8 +51,9 @@ textarea {
 
 /* ----------- Current time and date ---------- */
 .time-and-date-container {
-  margin-bottom: 30px;
   align-items: baseline;
+  padding-bottom: 30px;
+  box-shadow: 0px 15px 10px -15px rgb(0, 0, 0, 0.4);
 }
 
 .time-and-date {
@@ -45,22 +61,22 @@ textarea {
   margin-right: 50px;
   font-size: 18px;
   font-weight: 500;
-  /* color: #CE7777; */
+  color: #4a74fc;
 }
 
 .txt {
-  color: #4a74fc;
+  color: #303030;
 }
 
 .icons {
   font-size: 1.3rem;
-  color: #4a74fc;
+  color: #303030;
   height: auto;
   margin-right: 9px;
 }
 
 /* ------------------ Divider ----------------- */
-.divider {
+/* .divider {
   position: relative;
   margin-top: 90px;
   height: 1px;
@@ -75,63 +91,109 @@ textarea {
   width: 90%;
   height: 1px;
   background-image: linear-gradient(to right, transparent, rgb(136, 136, 136), transparent);
-}
-
-
-
-/* .jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-}
-
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
-
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
 } */
+
+/* --------------- main section --------------- */
+.main-section {
+  background-color: #e7eee9;
+  margin-bottom: 150px;
+}
+
+.sub-title {
+  font-weight: 500;
+  font-size: 20px;
+  padding-top: 70px;
+}
+
+.instructions {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+strong {
+  color: #f38080;
+}
+
+/* ------------- Time on the left ------------- */
+.time-of-day {
+  width: 90px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid rgb(136, 136, 136);
+}
+
+/* --------------- form textarea -------------- */
+.text-area {
+  border: 1px solid rgb(136, 136, 136);
+  border-radius: 5px;
+  height: 90px;
+  line-height: normal;
+  color: #000000;
+  display: block;
+  width: 100%;
+  user-select: auto;
+  font-size: 17px;
+  padding: 0 6px;
+  padding: 11px 19px 10px 19px;
+  margin-right: 5px;
+}
+
+.text-area:focus {
+  border: 2px solid #5551ff;
+}
+
+/* ----------- Save & clear buttons ----------- */
+.save-btn {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+  background: #636363;
+  text-align: center;
+  transition-duration: 0.15s;
+  border: 2px solid #636363;
+}
+/* -------------- #57d374 #97cc43 -------------- */
+.save-btn:hover {
+  background-color: #ffcc72;
+  color: #000000;
+}
+
+.save-btn:active {
+  transform: scale(0.95);
+}
+
+.clear-btn {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition-duration: 0.15s;
+  border: 2px solid #636363;
+  color: #636363;
+}
+
+.clear-btn:hover {
+  border: 1.8px solid #636363;
+  color: #3b5cc9;
+  background-color:white ;
+  border: 2px solid #3b5cc9;
+}
+.clear-btn:active {
+  transform: scale(0.95);
+}
+
+footer {
+  background-color: #3e4552;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px -15px 10px -15px rgba(114, 119, 115, 0.9);
+}
+
+.foot-txt {
+  margin-top: 5px;
+  font-size: 1.1rem;
+}
