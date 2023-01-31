@@ -1,7 +1,9 @@
-var timeOfDay = $("#time-of-day");
+var timeOfDay = $(".time-of-day").val();
 var saveBtn = $(".save-btn");
 var clearBtn = $(".clear-btn");
-// var userInputTasks = $(".user-input");
+var currentTime = moment().format("hh");
+
+console.log(currentTime);
 
 // --------------- Display Date --------------- //
 const weekDay = moment().format("DD MMMM YYYY");
@@ -16,7 +18,7 @@ function displayTime() {
 setInterval(displayTime, 1000);
 displayTime();
 
-// ------------- User input is stored when save is clicked ------------- //
+// ------------- User input is stored when save button is clicked ------------- //
 $(document).ready(function () {
   saveBtn.on("click", function () {
     var userInputTasks = $(".user-input")
@@ -37,16 +39,9 @@ $(document).ready(function () {
   }
 });
 
-// ----------- Get users task input from local storage ----------- //
-// $(document).ready(function () {
-//   var storedTask = localStorage.getItem("usersTask");
-//   if (storedTask) {
-//     $("#user-input").val(storedTask);
-//   }
-// });
-
 // ------------ Clear local storage and also input field ----------- //
 clearBtn.on("click", function () {
-  localStorage.removeItem("usersTask");
-  $("#user-input").val("");
+  var userInputTasks = $(".user-input");
 });
+
+

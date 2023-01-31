@@ -21,4 +21,4 @@ To view project, visit [Work Day Planner](https://murtaza34.github.io/Work-Day-P
 
 ## Preview
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./assets/Screenshot.png)
